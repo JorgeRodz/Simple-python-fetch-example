@@ -30,8 +30,10 @@ pip install requests
 
 ## 📂 File Structure
 ```
-number_trivia.py       # Main Python script
-README.md              # Project documentation
+web_api.py              # Main Python script
+test_web_api.py         # Unit tests using pytest
+README.md               # Project documentation
+
 ```
 ## 💡 Usage
 1. Clone the repository:
@@ -65,13 +67,38 @@ Numero de la trivia -> 42
 
 ```
 ---
+## 🧪 Running Tests
+This project includes basic unit tests for the trivia_fetch function using pytest.
+
+### 📦 Install pytest (if you haven't already):
+```bash
+pip install pytest
+```
+
+### ▶️ Run the tests:
+Make sure you're in the project directory, then run:
+
+```bash
+python -m pytest test_web_api.py -v
+```
+
+You should see output like:
+
+```bash
+test_web_api.py::test_trivia_42 PASSED
+test_web_api.py::test_trivia_1000 PASSED
+```
+These tests check that the function returns the correct trivia number when querying the Numbers API.
+
+---
 ## 📄 License
 This project is licensed under the MIT License. You can modify and use it freely.
 
 ---
 ## 🤝 Contributing
-Pull requests are welcome! For major changes, please open an issue first to discuss the proposed changes.
----
 
+Pull requests are welcome! For major changes, please open an issue first to discuss the proposed changes.
+
+---
 ## 📫 Contact
 Feel free to reach out via GitHub Issues if you have questions or suggestions.
